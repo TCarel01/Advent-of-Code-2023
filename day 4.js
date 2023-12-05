@@ -13,8 +13,6 @@ function parseDay1(input){
 
 let parsedInput = parseDay1(input);
 
-let x = 2;
-
 let totalPoints = 0;
 
 let cardCopies = [];
