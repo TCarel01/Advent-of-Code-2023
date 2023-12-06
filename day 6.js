@@ -36,10 +36,7 @@ let race1 = parseInt(parsedInput[0].join(''));
 
 let race2 = parseInt(parsedInput[1].join(''));
 
-let test = 2;
-
 let minValue = -1;
-let maxValue = 1;
 
 for (let i = 0; i < race1; ++i) {
     let currentMPH = i;
@@ -50,15 +47,6 @@ for (let i = 0; i < race1; ++i) {
     }
 }
 
-for (let j = race1; j > 0; --j) {
-    let currentMPH = j;
-    let distance = currentMPH * (race1 - currentMPH);
-    if (distance > race2) {
-        maxValue = j;
-        break;
-    }
-}
-
-let finalValue = maxValue - minValue + 1;
+let finalValue = race1 - 2 * minValue + 1;
 
 console.log("The number of ways to win the race is: " + finalValue);
